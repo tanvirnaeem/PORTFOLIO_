@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+<filter id="b"><feGaussianBlur stdDeviation="28"/></filter></defs>
+<rect width="900" height="520" rx="32" fill="#0b0b12"/>
+<circle cx="720" cy="100" r="120" fill="#8b5cf6" opacity=".18" filter="url(#b)"/>
+<circle cx="170" cy="410" r="140" fill="#22d3ee" opacity=".12" filter="url(#b)"/>
+<rect x="105" y="90" width="690" height="340" rx="22" fill="#12121b" stroke="#ffffff" stroke-opacity=".12"/>
+<circle cx="135" cy="120" r="6" fill="#8b5cf6"/><circle cx="157" cy="120" r="6" fill="#c084fc"/><circle cx="179" cy="120" r="6" fill="#22d3ee"/>
+<path d="M170 185h180M170 215h280M170 245h220" stroke="url(#g)" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+<path d="M170 305h110M170 335h210M170 365h160" stroke="#fff" stroke-opacity=".18" stroke-width="9" stroke-linecap="round"/>
+<path d="M555 180l100 55-100 55M520 300l-55 45" fill="none" stroke="#22d3ee" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="555" y="375" fill="#f6f5f8" font-family="Arial" font-size="28" font-weight="700">BUILD • SHIP • LEARN</text>
+</svg>

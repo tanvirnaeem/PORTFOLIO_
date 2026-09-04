@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#c084fc"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+<rect width="900" height="520" rx="32" fill="#0b0b12"/>
+<g stroke="url(#g)" stroke-width="4" opacity=".55">
+<path d="M150 170L320 90 460 210 650 115 770 235 610 390 410 350 250 410 150 170"/>
+<path d="M320 90L410 350M460 210L610 390M650 115L610 390M250 410L410 350"/>
+</g>
+<g fill="#12121b" stroke="#fff" stroke-opacity=".25" stroke-width="3">
+<circle cx="150" cy="170" r="35"/><circle cx="320" cy="90" r="35"/><circle cx="460" cy="210" r="35"/><circle cx="650" cy="115" r="35"/><circle cx="770" cy="235" r="35"/><circle cx="610" cy="390" r="35"/><circle cx="410" cy="350" r="35"/><circle cx="250" cy="410" r="35"/>
+</g>
+<g fill="#c084fc" font-family="Arial" font-size="19" font-weight="700" text-anchor="middle">
+<text x="150" y="177">C</text><text x="320" y="97">JAVA</text><text x="460" y="217">DB</text><text x="650" y="122">WEB</text><text x="770" y="242">OS</text><text x="610" y="397">NET</text><text x="410" y="357">OOP</text><text x="250" y="417">DS</text>
+</g>
+<text x="450" y="480" fill="#f6f5f8" font-family="Arial" font-size="25" font-weight="700" text-anchor="middle">CONNECTED IDEAS • CONNECTED SYSTEMS</text>
+</svg>
