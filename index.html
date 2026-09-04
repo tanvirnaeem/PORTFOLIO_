@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MUNSHI TANVIR HOSSAIN — ICT student and aspiring web developer at Bangladesh University of Professionals.">
+  <title>MUNSHI TANVIR HOSSAIN | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<style>
+/* FINAL HOME PHOTO POSITION - LEFT ADJUSTMENT */
+.home-hero .hero-visual{ transform:translateX(-90px)!important; }
+.home-hero .hero-reference-ring,
+.home-hero .hero-visual-glow{ transform:translateX(-90px)!important; }
+@media(max-width:1200px){
+ .home-hero .hero-visual{transform:translateX(-55px)!important;}
+ .home-hero .hero-reference-ring,
+ .home-hero .hero-visual-glow{transform:translateX(-55px)!important;}
+}
+@media(max-width:900px){
+ .home-hero .hero-visual,
+ .home-hero .hero-reference-ring,
+ .home-hero .hero-visual-glow{transform:none!important;}
+}
+</style>
+<style>
+/* =========================================================
+   HOME — REFERENCE MATCHED HERO
+   ========================================================= */
+.home-hero{
+  position:relative;
+  overflow:hidden;
+  min-height:calc(100vh - 82px);
+  display:flex;
+  align-items:center;
+  isolation:isolate;
+}
+.home-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-4;
+  background:
+    radial-gradient(circle at 72% 52%, rgba(124,58,237,.20), transparent 32%),
+    linear-gradient(90deg, rgba(9,8,20,.96) 0%, rgba(12,9,24,.91) 48%, rgba(18,10,34,.96) 100%);
+}
+.home-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  opacity:.22;
+  background-image:
+    linear-gradient(rgba(167,104,255,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167,104,255,.12) 1px, transparent 1px);
+  background-size:48px 48px;
+  mask-image:linear-gradient(90deg,transparent 0%,black 35%,black 100%);
+}
+.home-hero .hero-container{
+  position:relative;
+  width:min(1240px,92%);
+  margin:0 auto;
+  min-height:calc(100vh - 82px);
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(420px,.98fr);
+  align-items:center;
+  gap:24px;
+}
+.home-hero .hero-content{position:relative;z-index:5;padding:60px 0;}
+.home-hero .hero-visual{
+  position:absolute!important;
+  z-index:3;
+  right:2.5%!important;
+  left:auto!important;
+  top:50%;
+  width:min(510px,42vw);
+  aspect-ratio:1;
+  transform:translateY(-50%)!important;
+  display:grid;
+  place-items:center;
+}
+.home-hero .hero-visual img{
+  width:72%!important;
+  height:72%!important;
+  object-fit:cover!important;
+  object-position:center 42%!important;
+  border-radius:50%!important;
+  border:4px solid rgba(143,70,255,.95)!important;
+  box-shadow:0 0 0 12px rgba(126,58,237,.09),0 0 55px rgba(126,58,237,.42)!important;
+  position:relative;
+  z-index:4;
+}
+.home-hero .hero-visual::before{
+  content:"";
+  position:absolute;
+  width:78%;
+  height:78%;
+  border-radius:50%;
+  border:1px solid rgba(166,111,255,.72);
+  box-shadow:0 0 34px rgba(126,58,237,.28);
+  z-index:1;
+}
+.home-hero .hero-visual::after{
+  content:"";
+  position:absolute;
+  width:92%;
+  height:92%;
+  border-radius:50%;
+  border:1px solid rgba(139,92,246,.24);
+  z-index:0;
+}
+.home-hero .hero-reference-ring{
+  position:absolute!important;
+  right:5%!important;
+  left:auto!important;
+  top:50%;
+  width:min(560px,46vw);
+  aspect-ratio:1;
+  transform:translateY(-50%)!important;
+  border-radius:50%;
+  border:1px solid rgba(168,107,255,.34);
+  box-shadow:0 0 45px rgba(124,58,237,.12);
+  z-index:1;
+  pointer-events:none;
+}
+.home-hero .hero-visual-glow{
+  position:absolute!important;
+  right:9%!important;
+  left:auto!important;
+  top:50%;
+  width:min(500px,40vw);
+  aspect-ratio:1;
+  transform:translateY(-50%)!important;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(124,58,237,.24),transparent 68%);
+  filter:blur(18px);
+  z-index:0;
+  pointer-events:none;
+}
+/* subtle large background portrait, behind the text */
+.home-hero .hero-background-photo{
+  position:absolute;
+  left:-4%;
+  top:50%;
+  width:min(850px,60vw);
+  height:115%;
+  transform:translateY(-50%);
+  object-fit:cover;
+  object-position:center;
+  opacity:.12;
+  filter:saturate(.65) contrast(.95);
+  mask-image:linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.30),transparent);
+  z-index:-2;
+  pointer-events:none;
+}
+.home-hero .hero-content h1,
+.home-hero .hero-content .hero-title{
+  letter-spacing:-.035em;
+}
+.home-hero .hero-content h1 strong,
+.home-hero .hero-content .accent,
+.home-hero .hero-content .highlight{color:#a855f7;}
+.home-hero .hero-content .hero-buttons{position:relative;z-index:8;}
+@media(max-width:1100px){
+  .home-hero .hero-container{grid-template-columns:1fr;}
+  .home-hero .hero-content{padding:72px 0 40px;max-width:650px;}
+  .home-hero .hero-visual{
+    width:390px;
+    right:2%!important;
+    opacity:.9;
+  }
+  .home-hero .hero-reference-ring{width:430px;right:1%!important;}
+  .home-hero .hero-visual-glow{width:400px;right:3%!important;}
+}
+@media(max-width:800px){
+  .home-hero{min-height:auto;}
+  .home-hero .hero-container{min-height:auto;display:flex;flex-direction:column;align-items:flex-start;padding:60px 0 70px;}
+  .home-hero .hero-content{padding:10px 0 0;width:100%;}
+  .home-hero .hero-visual{
+    position:relative!important;
+    right:auto!important;
+    top:auto;
+    transform:none!important;
+    width:min(390px,82vw);
+    margin:10px auto 0;
+  }
+  .home-hero .hero-reference-ring,
+  .home-hero .hero-visual-glow{display:none!important;}
+  .home-hero .hero-background-photo{display:none;}
+}
+</style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo"><span>&lt;</span>Tanvir<span>/&gt;</span></a>
+
+    <nav id="navMenu">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="home-hero" id="home">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-stars" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <div class="hero-container">
+<div class="hero-content reveal">
+    <p class="eyebrow"><span></span> Welcome to my portfolio</p>
+    <h1>
+      <span>Hi, I'm</span>
+      <strong>MUNSHI <b>TANVIR</b> HOSSAIN</strong>
+    </h1>
+    <h2><span id="typingText"></span><span class="cursor">|</span><em> · BUP ICT Student</em></h2>
+    <p class="hero-description">
+      I build modern, responsive web applications and enjoy turning ideas into
+      real-world solutions. Passionate about clean code, problem solving and
+      continuous learning.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="assets/Munshi_Tanvir_Hossain_CV.pdf" class="btn primary" download="Munshi_Tanvir_Hossain_CV.pdf">Download CV <span>↓</span></a>
+      <a href="#projects" class="btn secondary">View My Work <span>→</span></a>
+    </div>
+
+    <div class="social-row" aria-label="Social links">
+      <a href="https://github.com/tanvirnaeem" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+      <a href="https://www.linkedin.com/in/tanvir-naeem-621077397" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+      <a href="mailto:tanvirnaeeem@gmail.com" aria-label="Email">✉</a>
+    </div>
+  </div>
+<div class="hero-visual hero-visual-clean" aria-label="Munshi Tanvir Hossain portrait">
+    <div class="hero-orbit orbit-outer"></div>
+    <div class="hero-orbit orbit-main"></div>
+    <span class="orbit-dot dot-1"></span>
+    <span class="orbit-dot dot-2"></span>
+    <span class="orbit-dot dot-3"></span>
+    <span class="orbit-dot dot-4"></span>
+    <div class="hero-photo-single">
+      <img src="assets/tanvir-profile.jpg" alt="Munshi Tanvir Hossain" loading="eager">
+    </div>
+  </div>
+</div>
+
+
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-icon">♧</span>
+      <div><strong>1+</strong><small>Years in B.Sc ICT</small></div>
+    </div>
+    <div class="stat">
+      <span class="stat-icon">&lt;/&gt;</span>
+      <div><strong>6+</strong><small>Projects Completed</small></div>
+    </div>
+    <div class="stat">
+      <span class="stat-icon">▤</span>
+      <div><strong>53</strong><small>Academic Courses</small></div>
+    </div>
+    <div class="stat">
+      <span class="stat-icon">♜</span>
+      <div><strong>Growing</strong><small>Every Day</small></div>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#education">
+    <span class="mouse"></span>
+    <span>SCROLL DOWN</span>
+    <b>⌄</b>
+  </a>
+</section>
+<section class="section about" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 — ABOUT ME</p>
+        <h2>Turning curiosity into <span>skills.</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm MUNSHI TANVIR HOSSAIN, an ICT student at Bangladesh University of Professionals (BUP).
+            I enjoy learning how technology works and turning ideas into practical projects.
+          </p>
+          <p>
+            My current interests include web development, programming and exploring new
+            technologies. I believe consistent learning and hands-on practice are the best
+            ways to improve.
+          </p>
+
+          <div class="quick-info">
+            <div><span>🎓</span><div><small>University</small><b>Bangladesh University of Professionals</b></div></div>
+            <div><span>📍</span><div><small>Focus</small><b>ICT & Web Development</b></div></div>
+            <div><span>🎮</span><div><small>Hobby</small><b>Gaming</b></div></div>
+          </div>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="code-top"><i></i><i></i><i></i></div>
+          <pre><code><span class="purple">const</span> <span class="blue">tanvir</span> = {
+  <span class="key">name</span>: <span class="string">"MUNSHI TANVIR HOSSAIN"</span>,
+  <span class="key">university</span>: <span class="string">"BUP"</span>,
+  <span class="key">field</span>: <span class="string">"ICT"</span>,
+  <span class="key">interest</span>: [
+    <span class="string">"Web Development"</span>,
+    <span class="string">"Technology"</span>
+  ],
+  <span class="key">hobby</span>: <span class="string">"Gaming"</span>
+};</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 — TECH STACK</p>
+        <h2>Tools I <span>build with.</span></h2>
+        <p class="section-subtitle">A growing toolkit built through coursework, practice and hands-on projects.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal" data-level="88">
+          <div class="skill-top"><div class="skill-icon html-icon">H</div><span class="skill-level">88%</span></div>
+          <h3>HTML</h3><p>Semantic structure & accessible web pages.</p>
+          <div class="skill-line"><span style="width:88%"></span></div>
+        </div>
+
+        <div class="skill-card reveal" data-level="82">
+          <div class="skill-top"><div class="skill-icon css-icon">C</div><span class="skill-level">82%</span></div>
+          <h3>CSS</h3><p>Responsive layouts, UI styling & animations.</p>
+          <div class="skill-line"><span style="width:82%"></span></div>
+        </div>
+
+        <div class="skill-card reveal" data-level="72">
+          <div class="skill-top"><div class="skill-icon js-icon">JS</div><span class="skill-level">72%</span></div>
+          <h3>JavaScript</h3><p>Interactive interfaces & browser logic.</p>
+          <div class="skill-line"><span style="width:72%"></span></div>
+        </div>
+
+        <div class="skill-card reveal" data-level="72">
+          <div class="skill-top"><div class="skill-icon java-icon">☕</div><span class="skill-level">72%</span></div>
+          <h3>Java</h3><p>Object-oriented programming & application logic.</p>
+          <div class="skill-line"><span style="width:72%"></span></div>
+        </div>
+
+        <div class="skill-card reveal" data-level="78">
+          <div class="skill-top"><div class="skill-icon oop-icon">OOP</div><span class="skill-level">78%</span></div>
+          <h3>OOP</h3><p>Classes, inheritance, abstraction & polymorphism.</p>
+          <div class="skill-line"><span style="width:78%"></span></div>
+        </div>
+
+        <div class="skill-card reveal" data-level="76">
+          <div class="skill-top"><div class="skill-icon cpp-icon">C++</div><span class="skill-level">76%</span></div>
+          <h3>C++</h3><p>Problem solving, algorithms & object-oriented code.</p>
+          <div class="skill-line"><span style="width:76%"></span></div>
+        </div>
+
+        <div class="skill-card reveal" data-level="75">
+          <div class="skill-top"><div class="skill-icon c-icon">C</div><span class="skill-level">75%</span></div>
+          <h3>C</h3><p>Programming fundamentals, logic & problem solving.</p>
+          <div class="skill-line"><span style="width:75%"></span></div>
+        </div>
+
+        <div class="skill-card reveal" data-level="68">
+          <div class="skill-top"><div class="skill-icon mysql-icon">SQL</div><span class="skill-level">68%</span></div>
+          <h3>MySQL</h3><p>Database design, queries & data management.</p>
+          <div class="skill-line"><span style="width:68%"></span></div>
+        </div>
+
+        <div class="skill-card reveal" data-level="68">
+          <div class="skill-top"><div class="skill-icon git-icon">GH</div><span class="skill-level">68%</span></div>
+          <h3>Git & GitHub</h3><p>Version control & project collaboration.</p>
+          <div class="skill-line"><span style="width:68%"></span></div>
+        </div>
+      </div>
+
+      <div class="stack-marquee reveal" aria-label="Technology list">
+        <div class="marquee-track">
+          <span>HTML</span><b>✦</b><span>CSS</span><b>✦</b><span>JavaScript</span><b>✦</b>
+          <span>Java</span><b>✦</b><span>OOP</span><b>✦</b><span>C++</span><b>✦</b>
+          <span>C</span><b>✦</b><span>MySQL</span><b>✦</b><span>GitHub</span><b>✦</b>
+          <span>HTML</span><b>✦</b><span>CSS</span><b>✦</b><span>JavaScript</span><b>✦</b>
+          <span>Java</span><b>✦</b><span>OOP</span><b>✦</b><span>C++</span><b>✦</b>
+          <span>C</span><b>✦</b><span>MySQL</span><b>✦</b><span>GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section coursework" id="coursework">
+<div class="section-heading reveal"><p class="eyebrow">03 — ACADEMIC JOURNEY</p>
+<h2>Coursework that built my <span>foundation.</span></h2>
+<p class="section-subtitle">Completed academic coursework at Bangladesh University of Professionals (BUP), covering programming, software, databases, communication systems, engineering and mathematics.</p></div>
+<div class="course-stats reveal"><div><strong>53</strong><span>Courses</span></div><div><strong>8+</strong><span>Core Areas</span></div><div><strong>BUP</strong><span>University</span></div></div>
+<div class="course-filters reveal">
+<button class="course-filter active" data-filter="all">All</button><button class="course-filter" data-filter="Programming">Programming</button><button class="course-filter" data-filter="Web Development">Web</button><button class="course-filter" data-filter="Database">Database</button><button class="course-filter" data-filter="Networking & Communication">Communication</button><button class="course-filter" data-filter="Systems">Systems</button><button class="course-filter" data-filter="Laboratory">Labs</button></div>
+<div class="course-grid"><article class="course-card reveal" data-category="Engineering Core">
+<span class="course-code">ICE1103(B18)</span><h3>Electrical Circuits</h3><span class="course-category">Engineering Core</span></article>
+<article class="course-card reveal" data-category="Science & Mathematics">
+<span class="course-code">PHY1105V2</span><h3>Engineering Physics</h3><span class="course-category">Science & Mathematics</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">PHY1106V2</span><h3>Engineering Physics Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Science & Mathematics">
+<span class="course-code">CHEM1109</span><h3>Chemistry</h3><span class="course-category">Science & Mathematics</span></article>
+<article class="course-card reveal" data-category="General Education">
+<span class="course-code">GED1111</span><h3>Bangladesh Studies</h3><span class="course-category">General Education</span></article>
+<article class="course-card reveal" data-category="General Education">
+<span class="course-code">GED1113</span><h3>Financial and Managerial Accounting</h3><span class="course-category">General Education</span></article>
+<article class="course-card reveal" data-category="Science & Mathematics">
+<span class="course-code">MATH1107</span><h3>Mathematics-I (Differential and Integral Calculus)</h3><span class="course-category">Science & Mathematics</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE1104(B8)</span><h3>Electrical Circuits Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Science & Mathematics">
+<span class="course-code">GED1203(V5)</span><h3>Statistics and Probability</h3><span class="course-category">Science & Mathematics</span></article>
+<article class="course-card reveal" data-category="Communication">
+<span class="course-code">ENG1202</span><h3>Communicative English</h3><span class="course-category">Communication</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE1204(V1)</span><h3>Electronic Devices and Circuit Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Science & Mathematics">
+<span class="course-code">MATH1205</span><h3>Mathematics-II (Ordinary and Partial Differential Equations)</h3><span class="course-category">Science & Mathematics</span></article>
+<article class="course-card reveal" data-category="Communication">
+<span class="course-code">LANG1207</span><h3>Foreign Language</h3><span class="course-category">Communication</span></article>
+<article class="course-card reveal" data-category="Science & Mathematics">
+<span class="course-code">ICE1207(V3)</span><h3>Discrete Mathematics</h3><span class="course-category">Science & Mathematics</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE1206(V3)</span><h3>Structured Programming Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Programming">
+<span class="course-code">ICE1205(V4)</span><h3>Structured Programming</h3><span class="course-category">Programming</span></article>
+<article class="course-card reveal" data-category="Engineering Core">
+<span class="course-code">ICE1203</span><h3>Electronic Devices and Circuit</h3><span class="course-category">Engineering Core</span></article>
+<article class="course-card reveal" data-category="Communication">
+<span class="course-code">ENG2102</span><h3>Presentation Skill Development</h3><span class="course-category">Communication</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE2104(V2)</span><h3>Communication Theory Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Networking & Communication">
+<span class="course-code">ICE2107(V3)</span><h3>Data Communication</h3><span class="course-category">Networking & Communication</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE2108(V3)</span><h3>Data Communication Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Programming">
+<span class="course-code">ICE2109(V4)</span><h3>Object Oriented Design and Programming-I</h3><span class="course-category">Programming</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE2110(V4)</span><h3>Object Oriented Design and Programming-I Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Science & Mathematics">
+<span class="course-code">MATH2109</span><h3>Mathematics-III (Linear Algebra and Fourier Analysis)</h3><span class="course-category">Science & Mathematics</span></article>
+<article class="course-card reveal" data-category="Networking & Communication">
+<span class="course-code">ICE2103(V1)</span><h3>Communication Theory</h3><span class="course-category">Networking & Communication</span></article>
+<article class="course-card reveal" data-category="Engineering Core">
+<span class="course-code">ICE2105(V2)</span><h3>Digital Logic Design</h3><span class="course-category">Engineering Core</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE2106(V1)</span><h3>Digital Logic Design Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Programming">
+<span class="course-code">ICE2201(V2)</span><h3>Data Structure</h3><span class="course-category">Programming</span></article>
+<article class="course-card reveal" data-category="Science & Mathematics">
+<span class="course-code">MATH2207(V2)</span><h3>Mathematics-IV (Linear Algebra and Statistics)</h3><span class="course-category">Science & Mathematics</span></article>
+<article class="course-card reveal" data-category="Engineering Core">
+<span class="course-code">ICE2205(V2)</span><h3>Signals and Systems</h3><span class="course-category">Engineering Core</span></article>
+<article class="course-card reveal" data-category="Database">
+<span class="course-code">ICE2204(V2)</span><h3>Database Management System Laboratory</h3><span class="course-category">Database</span></article>
+<article class="course-card reveal" data-category="Database">
+<span class="course-code">ICE2203(V2)</span><h3>Database Management System</h3><span class="course-category">Database</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE2202(V2)</span><h3>Data Structure Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="General Education">
+<span class="course-code">GED2211(V2)</span><h3>Professional Ethics and Environmental Protection</h3><span class="course-category">General Education</span></article>
+<article class="course-card reveal" data-category="Engineering Core">
+<span class="course-code">ICE3107(V1)</span><h3>Digital Signal Processing</h3><span class="course-category">Engineering Core</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE3108(V1)</span><h3>Digital Signal Processing Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE3104(V1)</span><h3>Operating System Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Networking & Communication">
+<span class="course-code">ICE3105(V1)</span><h3>Digital Communication</h3><span class="course-category">Networking & Communication</span></article>
+<article class="course-card reveal" data-category="Systems">
+<span class="course-code">ICE3103(V1)</span><h3>Operating System</h3><span class="course-category">Systems</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE3102(V1)</span><h3>Analysis and Design of Algorithm Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Programming">
+<span class="course-code">ICE3101(V1)</span><h3>Analysis and Design of Algorithm</h3><span class="course-category">Programming</span></article>
+<article class="course-card reveal" data-category="Networking & Communication">
+<span class="course-code">ICE3109(V2)</span><h3>Telecommunication Systems</h3><span class="course-category">Networking & Communication</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE3110(V2)</span><h3>Telecommunication Systems Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Systems">
+<span class="course-code">ICE3201(V2)</span><h3>Microprocessor and Computer Architecture</h3><span class="course-category">Systems</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE3202(V2)</span><h3>Microprocessor and Computer Architecture Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Professional">
+<span class="course-code">ICE3211(V2)</span><h3>Industrial Training</h3><span class="course-category">Professional</span></article>
+<article class="course-card reveal" data-category="Research">
+<span class="course-code">ICE3209(V2)</span><h3>Statistics and Research Methodology</h3><span class="course-category">Research</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE3208(V2)</span><h3>Software and Requirement Engineering Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Software Engineering">
+<span class="course-code">ICE3207(V2)</span><h3>Software and Requirement Engineering</h3><span class="course-category">Software Engineering</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE3206(V2)</span><h3>Web Technologies Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Web Development">
+<span class="course-code">ICE3205(V2)</span><h3>Web Technologies</h3><span class="course-category">Web Development</span></article>
+<article class="course-card reveal" data-category="Laboratory">
+<span class="course-code">ICE3204(V2)</span><h3>Microwave Engineering and Antenna Laboratory</h3><span class="course-category">Laboratory</span></article>
+<article class="course-card reveal" data-category="Engineering Core">
+<span class="course-code">ICE3203(V2)</span><h3>Microwave Engineering and Antenna</h3><span class="course-category">Engineering Core</span></article>
+</div>
+<p class="course-note reveal">Course codes and titles are shown as provided from the academic curriculum. Laboratory courses are included to highlight practical experience.</p>
+</section>
+
+<section class="section education" id="education">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 — EDUCATION</p>
+        <h2>My academic <span>journey.</span></h2>
+      </div>
+      <div class="education-card reveal">
+        <div class="edu-badge edu-logo">
+      <img src="assets/bup-logo.png" alt="Bangladesh University of Professionals logo">
+    </div>
+        <div class="edu-content">
+          <span class="tag">UNDERGRADUATE · ICT</span>
+          <h3>Bangladesh University of Professionals</h3>
+          <p>Building a strong foundation in Information & Communication Technology through programming, software engineering, databases, communication systems, mathematics and practical laboratory work.</p>
+          <div class="edu-chips"><span>Programming</span><span>Web Technologies</span><span>Database</span><span>Networking</span><span>Software Engineering</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bup-feature">
+<div class="bup-feature-card reveal">
+        <div class="bup-emblem bup-emblem-logo">
+          <img src="assets/bup-logo-feature.png" alt="Bangladesh University of Professionals logo">
+        </div>
+        <div class="bup-copy">
+          <p class="eyebrow">MY UNIVERSITY · OFFICIAL</p>
+          <h2>Bangladesh University of <span>Professionals.</span></h2>
+          <p>Studying ICT at BUP under the Faculty of Science & Technology. BUP's official site describes the ICT department as one of its pioneer departments, with undergraduate and graduate education in Information and Communication Technology.</p>
+          <div class="bup-links">
+            <a class="btn primary" href="https://bup.edu.bd/" target="_blank" rel="noopener">Visit Official BUP ↗</a>
+            <a class="btn secondary" href="https://bup.edu.bd/public/department_home/3" target="_blank" rel="noopener">Explore ICT Department ↗</a>
+          </div>
+        </div>
+        <div class="bup-motto"><span>EXCELLENCE</span><b>THROUGH</b><span>KNOWLEDGE</span></div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">06 — PROJECTS</p>
+        <h2>Academic projects I've <span>built.</span></h2>
+        <p class="section-subtitle">A selection of university projects across databases, programming, systems, software engineering and web technologies.</p>
+      </div>
+
+      <div class="project-grid project-grid-wide">
+        <article class="project-card reveal">
+          <div class="project-number">01</div><div class="project-icon">💍</div>
+          <div class="project-body"><span class="tag">DBMS</span><h3>Bolo Kobul</h3>
+          <p>A matrimonial website project developed for Database Management Systems, focused on applying database concepts to a real-world social platform idea.</p>
+          <div class="techs"><span>DBMS</span><span>MySQL</span></div></div>
+          <a href="https://github.com/tanvirnaeem" target="_blank" rel="noopener" class="project-link">GitHub Profile ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">02</div><div class="project-icon">🎹</div>
+          <div class="project-body"><span class="tag">ELECTRICAL CIRCUITS</span><h3>Piano</h3>
+          <p>A piano project created as part of the Electrical Circuits coursework, connecting circuit concepts with an interactive musical application idea.</p>
+          <div class="techs"><span>Circuits</span><span>Electronics</span></div></div>
+          <a href="https://github.com/tanvirnaeem" target="_blank" rel="noopener" class="project-link">GitHub Profile ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">03</div><div class="project-icon">⭕</div>
+          <div class="project-body"><span class="tag">OOP-2</span><h3>Tic-Tac-Toe</h3>
+          <p>A Tic-Tac-Toe game project developed using JDBC, applying object-oriented programming concepts with database connectivity.</p>
+          <div class="techs"><span>Java</span><span>OOP</span><span>JDBC</span></div></div>
+          <a href="https://github.com/tanvirnaeem" target="_blank" rel="noopener" class="project-link">GitHub Profile ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">04</div><div class="project-icon">🖥️</div>
+          <div class="project-body"><span class="tag">OPERATING SYSTEM</span><h3>OS Website</h3>
+          <p>A website project created for the Operating System course to present and demonstrate course-related work in a web format.</p>
+          <div class="techs"><span>Web</span><span>Operating Systems</span></div></div>
+          <a href="https://github.com/tanvirnaeem" target="_blank" rel="noopener" class="project-link">GitHub Profile ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">05</div><div class="project-icon">👥</div>
+          <div class="project-body"><span class="tag">SOFTWARE ENGINEERING</span><h3>BUP Social App</h3>
+          <p>A university-focused social application concept developed for Software & Requirement Engineering, centered around BUP students and social interaction.</p>
+          <div class="techs"><span>Requirements</span><span>Software Engineering</span><span>BUP</span></div></div>
+          <a href="https://github.com/tanvirnaeem" target="_blank" rel="noopener" class="project-link">GitHub Profile ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">06</div><div class="project-icon">🚗</div>
+          <div class="project-body"><span class="tag">WEB TECHNOLOGIES</span><h3>BUPGO</h3>
+          <p>A ride-sharing platform concept for BUP students, designed to make student commuting more convenient through a dedicated web-based solution.</p>
+          <div class="techs"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web</span></div></div>
+          <a href="https://github.com/tanvirnaeem" target="_blank" rel="noopener" class="project-link">GitHub Profile ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section achievements" id="achievements">
+      <div class="section-heading reveal">
+        <p class="eyebrow">07 — ACHIEVEMENTS</p>
+        <h2>Small wins, <span>steady progress.</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">✓</div>
+          <div><span>ACADEMIC</span><h3>Completed Web Development Coursework</h3><p>Built practical webpages while learning HTML, CSS and JavaScript.</p></div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">✓</div>
+          <div><span>PROJECTS</span><h3>Completed Multiple Academic Projects</h3><p>Applied programming and problem-solving concepts through hands-on projects.</p></div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">✓</div>
+          <div><span>TEAMWORK</span><h3>Worked on Team-Based Activities</h3><p>Gained experience collaborating with classmates on academic tasks and projects.</p></div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">✓</div>
+          <div><span>LEARNING</span><h3>Growing Technical Skill Set</h3><p>Continuously exploring new tools, technologies and better ways to build for the web.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section learning" id="learning">
+      <div class="section-heading reveal">
+        <p class="eyebrow">07 — CURRENTLY LEARNING</p>
+        <h2>Always <span>leveling up.</span></h2>
+        <p class="section-subtitle">The areas I'm actively improving through coursework, practice and projects.</p>
+      </div>
+      <div class="learning-grid">
+        <div class="learning-card reveal"><span>01</span><div><h3>Advanced JavaScript</h3><p>Deeper DOM manipulation, modern JS and interactive UI.</p></div></div>
+        <div class="learning-card reveal"><span>02</span><div><h3>Data Structures & Algorithms</h3><p>Strengthening problem-solving and algorithmic thinking.</p></div></div>
+        <div class="learning-card reveal"><span>03</span><div><h3>Database Management</h3><p>Improving SQL, database design and data-driven applications.</p></div></div>
+        <div class="learning-card reveal"><span>04</span><div><h3>Software Engineering</h3><p>Learning better requirements, design and development practices.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section hobbies">
+      <div class="section-heading reveal">
+        <p class="eyebrow">09 — BEYOND CODE</p>
+        <h2>When I'm not <span>coding.</span></h2>
+      </div>
+
+      <div class="hobby-card reveal">
+        <div class="hobby-emoji">🎮</div>
+        <div>
+          <h3>Gaming</h3>
+          <p>Gaming is one of my favorite ways to relax, have fun and challenge myself.</p>
+        </div>
+        <div class="game-pills"><span>Strategy</span><span>Competitive</span><span>Entertainment</span></div>
+      </div>
+    </section>
+
+    <section class="section github-showcase">
+      <div class="github-box reveal">
+        <div class="github-mark">GH</div>
+        <div><p class="eyebrow">OPEN SOURCE & PROJECTS</p><h2>More work on <span>GitHub.</span></h2><p>Explore my repositories, experiments and academic projects as my development journey grows.</p></div>
+        <a class="btn primary" href="https://github.com/tanvirnaeem" target="_blank" rel="noopener">Visit GitHub ↗</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-box reveal">
+        <div>
+          <p class="eyebrow">11 — CONTACT</p>
+          <h2>Let's build something <span>together.</span></h2>
+          <p>Have a project, idea or just want to connect? Feel free to reach out.</p>
+        </div>
+
+        <div class="contact-details">
+          <a href="mailto:tanvirnaeeem@gmail.com"><span>✉</span><div><small>Email</small><b>tanvirnaeeem@gmail.com</b></div></a>
+          <a href="tel:01581170894"><span>☎</span><div><small>Phone</small><b>01581170894</b></div></a>
+          <a href="https://github.com/tanvirnaeem" target="_blank" rel="noopener"><span>GH</span><div><small>GitHub</small><b>github.com/tanvirnaeem</b></div></a>
+          <a href="https://www.linkedin.com/in/tanvir-naeem-621077397" target="_blank" rel="noopener"><span>in</span><div><small>LinkedIn</small><b>MUNSHI TANVIR HOSSAIN</b></div></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">&lt;Tanvir/&gt;</div>
+    <p>Designed & built by MUNSHI TANVIR HOSSAIN · <span id="year"></span></p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
